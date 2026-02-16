@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart University Admission Portal</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f2f2f2;
+}
+h1{
+    text-align:center;
+}
+form{
+    width:80%;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+fieldset{
+    margin-bottom:20px;
+    padding:15px;
+    border:2px solid #444;
+}
+legend{
+    font-weight:bold;
+}
+label{
+    display:block;
+    margin-top:10px;
+}
+input, select, textarea{
+    width:100%;
+    padding:5px;
+    margin-top:5px;
+}
+button{
+    margin-top:15px;
+    padding:8px 15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Smart University Admission Portal</h1>
+
+<form oninput="total.value=parseInt(coursefee.value||0)+parseInt(hostelfee.value||0)">
+
+<!-- Section 1 -->
+<fieldset>
+<legend>Student Details</legend>
+
+<label>Full Name</label>
+<input type="text" autofocus placeholder="Enter full name" maxlength="30" required>
+
+<label>Email</label>
+<input type="email" required autocomplete="off">
+
+<label>Phone</label>
+<input type="tel" pattern="[0-9]{10}" title="Enter 10 digit number" placeholder="9876543210">
+
+<label>Date of Birth</label>
+<input type="date" min="1990-01-01" max="2010-12-31">
+
+<label>Gender</label>
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other
+
+<label>Upload Passport Photo</label>
+<input type="file">
+
+<label>Application ID</label>
+<input type="text" value="APP2026" readonly>
+
+<input type="hidden" value="INT123">
+
+</fieldset>
+
+<!-- Section 2 -->
+<fieldset>
+<legend>Course Details</legend>
+
+<label>Select Degree</label>
+<select>
+<option>B.Tech</option>
+<option>BCA</option>
+<option>B.Sc</option>
+<option>MBA</option>
+</select>
+
+<label>Specialization</label>
+<select>
+<optgroup label="Science">
+<option>Computer Science</option>
+<option>Data Science</option>
+</optgroup>
+<optgroup label="Management">
+<option>Finance</option>
+<option>Marketing</option>
+</optgroup>
+</select>
+
+<label>Elective Subjects</label>
+<select multiple size="3">
+<option>AI</option>
+<option>Cloud</option>
+<option>Cyber Security</option>
+</select>
+
+<label>Preferred Campus</label>
+<input list="campus">
+<datalist id="campus">
+<option value="Bangalore">
+<option value="Mysore">
+<option value="Mangalore">
+<option value="Hubli">
+</datalist>
+
+</fieldset>
+
+<!-- Section 3 -->
+<fieldset>
+<legend>Academic Details</legend>
+
+<label>12th Percentage</label>
+<input type="number" min="0" max="100" step="0.1">
+
+<label>Entrance Exam Score</label>
+<input type="number">
+
+<label>Passing Month</label>
+<input type="month">
+
+<label>Admission Week</label>
+<input type="week">
+
+<label>Interview Date & Time</label>
+<input type="datetime-local">
+
+<label>Study Hours Per Day</label>
+<input type="range" min="0" max="12">
+
+</fieldset>
+
+<!-- Section 4 -->
+<fieldset>
+<legend>Hostel & Transport</legend>
+
+<label>Require Hostel?</label>
+<input type="radio" name="hostel"> Yes
+<input type="radio" name="hostel"> No
+
+<label>Room Type</label>
+<input type="checkbox"> AC
+<input type="checkbox"> Non-AC
+<input type="checkbox"> Sharing
+
+<label>Bus Route</label>
+<select>
+<option>Route 1</option>
+<option>Route 2</option>
+<option>Route 3</option>
+</select>
+
+<label>Favorite Room Color</label>
+<input type="color">
+
+</fieldset>
+
+<!-- Section 5 -->
+<fieldset>
+<legend>Additional Information</legend>
+
+<label>Why do you want to join?</label>
+<textarea rows="4" cols="50"></textarea>
+
+<label>Upload Marksheet</label>
+<input type="file">
+
+<label>Upload Certificates</label>
+<input type="file" multiple>
+
+<label>Personal Website</label>
+<input type="url">
+
+</fieldset>
+
+<!-- Section 6 -->
+<fieldset>
+<legend>Fee Calculation</legend>
+
+<label>Course Fee</label>
+<input type="number" id="coursefee">
+
+<label>Hostel Fee</label>
+<input type="number" id="hostelfee">
+
+<label>Total Fee</label>
+<output name="total"></output>
+
+</fieldset>
+
+<!-- Section 7 -->
+<fieldset>
+<legend>Submit</legend>
+
+<button type="button">Check Details</button>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+<br><br>
+<input type="image" src="https://via.placeholder.com/100"
+height="50" width="100">
+</fieldset>
+
+</form>
+
+</body>
+</html>

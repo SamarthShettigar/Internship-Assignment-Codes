@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Application Portal</title>
+
+<style>
+body{
+    font-family: Arial;
+}
+form{
+    width:70%;
+    margin:auto;
+}
+fieldset{
+    margin-bottom:15px;
+}
+label{
+    display:block;
+    margin-top:8px;
+}
+</style>
+
+</head>
+<body>
+
+<h2 align="center">Smart Job Application Portal</h2>
+
+<form action="submit.php" method="POST" autocomplete="on">
+
+<!-- Section 1 -->
+<fieldset>
+<legend>Basic Information</legend>
+
+<label>Full Name</label>
+<input type="text" name="fullname"
+placeholder="Enter name"
+maxlength="50"
+required
+autofocus
+size="30">
+
+<label>Email</label>
+<input type="email" name="email"
+required
+autocomplete="off">
+
+<label>Phone</label>
+<input type="tel" name="phone"
+pattern="[0-9]{10}"
+title="Enter 10 digit number"
+placeholder="9876543210">
+
+<label>Portfolio</label>
+<input type="url" name="portfolio">
+
+<label>Date of Birth</label>
+<input type="date" name="dob"
+min="1980-01-01"
+max="2005-12-31">
+
+<label>Interview Week</label>
+<input type="week" name="week">
+
+<label>Interview Date & Time</label>
+<input type="datetime-local" name="datetime">
+
+<label>Preferred Contact Time</label>
+<input type="time" name="contacttime">
+
+</fieldset>
+
+<!-- Section 2 -->
+<fieldset>
+<legend>Job Selection</legend>
+
+<p>Select Role (Required)</p>
+<input type="radio" name="role" value="Software Developer" required> Software Developer
+<input type="radio" name="role" value="UI/UX Designer"> UI/UX Designer
+<input type="radio" name="role" value="Data Analyst"> Data Analyst
+<input type="radio" name="role" value="Cyber Security Engineer"> Cyber Security Engineer
+
+<p>Technical Skills</p>
+<input type="checkbox" name="skills" value="HTML"> HTML
+<input type="checkbox" name="skills" value="CSS"> CSS
+<input type="checkbox" name="skills" value="JavaScript"> JavaScript
+<input type="checkbox" name="skills" value="Python"> Python
+<input type="checkbox" name="skills" value="SQL"> SQL
+<input type="checkbox" name="skills" value="Cloud"> Cloud
+
+</fieldset>
+
+<!-- Section 3 -->
+<fieldset>
+<legend>Professional Details</legend>
+
+<label>Experience</label>
+<input type="number" name="exp"
+min="0" max="20" step="1">
+
+<label>Expected Salary</label>
+<input type="number" name="salary"
+step="5000">
+
+<label>Skill Level (0-10)</label>
+<input type="range" name="skill"
+min="0" max="10">
+
+<label>Work Location</label>
+<input list="cities" name="location">
+<datalist id="cities">
+<option value="Bangalore">
+<option value="Hyderabad">
+<option value="Chennai">
+<option value="Pune">
+</datalist>
+
+<label>Theme Color</label>
+<input type="color" name="color">
+
+<label>Search Job Code</label>
+<input type="search" name="jobcode">
+
+</fieldset>
+
+<!-- Section 4 -->
+<fieldset>
+<legend>Upload Documents</legend>
+
+<label>Resume</label>
+<input type="file" name="resume" required>
+
+<label>Certificates</label>
+<input type="file" name="certificates" multiple>
+
+</fieldset>
+
+<!-- Section 5 -->
+<fieldset>
+<legend>System Fields</legend>
+
+<label>Application ID</label>
+<input type="text" value="APP2026-001" readonly>
+
+<input type="hidden" name="refcode" value="HRX123">
+
+<label>Status</label>
+<input type="text" value="Pending" disabled>
+
+</fieldset>
+
+<!-- Section 6 -->
+<fieldset>
+<legend>Feedback</legend>
+
+<label>Why should we hire you?</label>
+<textarea rows="4" cols="40"></textarea>
+
+<label>Country Code</label>
+<input type="text"
+pattern="[A-Za-z]{3}"
+placeholder="IND">
+
+</fieldset>
+
+<!-- Section 7 -->
+<fieldset>
+<legend>Submit</legend>
+
+<label>Interview Slots (1-5)</label>
+<input type="number" min="1" max="5">
+
+<br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+<button type="button" onclick="alert('Saved Successfully')">
+Save
+</button>
+
+<input type="image"
+src="https://via.placeholder.com/80x30"
+height="30"
+width="80">
+
+</fieldset>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+    <style>
+        body{
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+        form{
+            width: 70%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }
+        fieldset{
+            margin-bottom: 15px;
+        }
+        label{
+            display: block;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2 align="center">Online Technical Event Registration</h2>
+
+<form action="submit.html" method="POST" autocomplete="on" target="_blank">
+
+<!-- Section 1 -->
+<fieldset>
+<legend>Basic Details</legend>
+
+<label>Full Name:</label>
+<input type="text" name="fullname" required>
+
+<label>Email:</label>
+<input type="email" name="email" required>
+
+<label>Phone:</label>
+<input type="tel" name="phone" pattern="[0-9]{10}" required>
+
+<label>Date of Birth:</label>
+<input type="date" name="dob" min="1990-01-01" max="2010-12-31" required>
+
+<label>Contact Time:</label>
+<input type="time" name="contact_time">
+
+<label>Upload ID Card:</label>
+<input type="file" name="idcard" required>
+
+<input type="hidden" name="regid" value="12345">
+</fieldset>
+
+<!-- Section 2 -->
+<fieldset>
+<legend>Event Selection</legend>
+
+Select Category:<br>
+<input type="radio" name="category" value="Web" required> Web Development
+<input type="radio" name="category" value="AI"> AI & ML
+<input type="radio" name="category" value="Cyber"> Cyber Security
+<input type="radio" name="category" value="Cloud"> Cloud Computing
+<br><br>
+
+Select Workshops:<br>
+<input type="checkbox" name="workshop" value="HTML"> HTML & CSS
+<input type="checkbox" name="workshop" value="JS"> JavaScript
+<input type="checkbox" name="workshop" value="Python"> Python
+<input type="checkbox" name="workshop" value="DS"> Data Science
+<input type="checkbox" name="workshop" value="EH"> Ethical Hacking
+</fieldset>
+
+<!-- Section 3 -->
+<fieldset>
+<legend>Schedule</legend>
+
+<label>Preferred Month:</label>
+<input type="month" name="month">
+
+<label>Date & Time:</label>
+<input type="datetime-local" name="datetime">
+
+<label>Week:</label>
+<input type="week" name="week">
+</fieldset>
+
+<!-- Section 4 -->
+<fieldset>
+<legend>Experience</legend>
+
+<label>Years of Experience:</label>
+<input type="number" name="experience" min="0" max="20" required>
+
+<label>Confidence Level (0-10):</label>
+<input type="range" name="confidence" min="0" max="10">
+
+<label>Favorite Color:</label>
+<input type="color" name="color">
+
+<label>Search Topic:</label>
+<input type="search" name="search">
+</fieldset>
+
+<!-- Section 5 -->
+<fieldset>
+<legend>Additional Info</legend>
+
+<label>Feedback:</label>
+<textarea name="feedback"></textarea>
+
+<label>Upload Resume:</label>
+<input type="file" name="resume">
+
+<label>Portfolio Link:</label>
+<input type="url" name="portfolio">
+</fieldset>
+
+<!-- Section 6 -->
+<fieldset>
+<legend>Payment</legend>
+
+<label>Tickets (1-5):</label>
+<input type="number" name="tickets" min="1" max="5" required>
+
+<br><br>
+
+<input type="image" src="submit.png" width="80">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+<button type="button" onclick="alert('Form Opened Successfully')">Click Me</button>
+
+</fieldset>
+
+</form>
+
+</body>
+</html>

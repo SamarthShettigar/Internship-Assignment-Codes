@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online College Admission Registration Form</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color:#f2f2f2;
+        }
+        .container{
+            width:70%;
+            margin:auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+        h1{
+            text-align:center;
+            color:darkblue;
+        }
+        fieldset{
+            margin-bottom:20px;
+            padding:15px;
+            border-radius:8px;
+        }
+        legend{
+            font-weight:bold;
+            color:darkgreen;
+        }
+        label{
+            display:inline-block;
+            width:200px;
+            margin-bottom:8px;
+        }
+        input, select, textarea{
+            margin-bottom:10px;
+        }
+        .buttons{
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Online Admission Registration Form</h1>
+<p>Please fill out this form carefully to apply for admission into your desired college program.</p>
+
+<!-- MAIN FORM -->
+<form action="/submit_admission.php" method="POST" target="_blank" autocomplete="on">
+
+<!-- Hidden Field -->
+<input type="hidden" name="application_id" value="APP2026001">
+
+<fieldset>
+<legend>Student Personal Details</legend>
+
+<label>Full Name:</label>
+<input type="text" name="fullname" required><br>
+
+<label>Create Password:</label>
+<input type="password" name="password" required><br>
+
+<label>Email ID:</label>
+<input type="email" name="email" required><br>
+
+<label>Mobile Number:</label>
+<input type="tel" name="mobile"><br>
+
+<label>Date of Birth:</label>
+<input type="date" name="dob"><br>
+
+<label>12th Percentage:</label>
+<input type="number" name="percentage" min="0" max="100"><br>
+
+<label>Favorite Color:</label>
+<input type="color" name="color"><br>
+
+<label>Upload Documents:</label>
+<input type="file" name="documents"><br>
+
+<label>Address:</label>
+<textarea rows="4" cols="40"></textarea><br>
+
+</fieldset>
+
+<fieldset>
+<legend>Course Selection</legend>
+
+<label>Gender:</label>
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+<input type="radio" name="gender" value="Other"> Other
+<br><br>
+
+<label>Hobbies:</label>
+<input type="checkbox" name="hobby" value="Reading"> Reading
+<input type="checkbox" name="hobby" value="Sports"> Sports
+<input type="checkbox" name="hobby" value="Music"> Music
+<br><br>
+
+<label>Select Course:</label>
+<select name="course">
+    <optgroup label="Engineering Department">
+        <option>B.Tech Computer Science</option>
+        <option>B.Tech Mechanical</option>
+    </optgroup>
+    <optgroup label="Management Department">
+        <option>BBA</option>
+        <option>MBA</option>
+    </optgroup>
+</select><br>
+
+<label>Search Course:</label>
+<input type="search" name="search_course"><br>
+
+<label>City:</label>
+<input list="cities" name="city">
+<datalist id="cities">
+    <option value="Bangalore">
+    <option value="Mangalore">
+    <option value="Mysore">
+    <option value="Udupi">
+</datalist>
+<br>
+
+<label>LinkedIn Profile:</label>
+<input type="url" name="linkedin"><br>
+
+<label>Communication Skill (1-10):</label>
+<input type="range" min="1" max="10"><br>
+
+</fieldset>
+
+<fieldset>
+<legend>Date & Time Inputs</legend>
+
+<label>Select Time:</label>
+<input type="time"><br>
+
+<label>Select Week:</label>
+<input type="week"><br>
+
+<label>Select Month:</label>
+<input type="month"><br>
+
+<label>Select Date & Time:</label>
+<input type="datetime-local"><br>
+
+</fieldset>
+
+<fieldset>
+<legend>Entrance Marks Calculation</legend>
+
+<label>Subject 1:</label>
+<input type="number" id="m1"><br>
+
+<label>Subject 2:</label>
+<input type="number" id="m2"><br>
+
+<label>Total Marks:</label>
+<output name="result" for="m1 m2"></output>
+</fieldset>
+
+<div class="buttons">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+<input type="button" value="Click Me">
+<input type="image" src="https://via.placeholder.com/80x30" alt="Submit">
+<button type="button">Custom Button</button>
+</div>
+
+</form>
+
+<!-- Second Small Form for novalidate -->
+<h3>Example Form with No Validation</h3>
+<form novalidate>
+<label>Name:</label>
+<input type="text">
+<input type="submit">
+</form>
+
+<hr>
+
+<h3>Difference Between GET and POST</h3>
+<p>
+GET method sends data through URL and is less secure. It is mainly used for retrieving data.
+POST method sends data inside the request body and is more secure. 
+For admission forms, POST is preferred because it protects sensitive data like passwords and personal information.
+</p>
+
+</div>
+
+</body>
+</html>
