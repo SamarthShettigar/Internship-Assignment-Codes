@@ -1,0 +1,42 @@
+/* Universal Selector */
+* {
+font-family: Arial, sans-serif;
+margin: 10px;
+}
+/* Element Selector */
+p {
+font-size: 16px;
+}
+/* Grouping Selector */
+h1, h2, h3 {
+text-align: center;
+}
+/* External CSS - h1 (Cascading Demo) */
+h1 {
+color: blue; /* Will be overridden */
+}
+/* h2 Styling */
+h2 {
+color: darkblue;
+}
+/* ID Selector */
+#contact {
+background-color: lightgray;
+padding: 10px;
+}
+/* Class Selectors */
+.highlight {
+color: darkred;
+font-weight: bold;
+}
+.center {
+text-align: center;
+}
+.card {
+border: 2px solid black;
+padding: 10px;
+}
+/* p.highlight (Class + Element) */
+p.highlight {
+background-color: lightpink;
+}
