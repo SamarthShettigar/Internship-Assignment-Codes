@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College E-Magazine</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+
+        body{
+            margin:0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color:#f4f4f4;
+        }
+
+        /* 1. Header Section */
+        header{
+            text-align:center;
+            background-color:#1e3a5f;
+            color:white;
+            padding:20px;
+            text-transform:uppercase;
+            font-family:'Playfair Display', serif;
+            text-shadow:2px 2px 5px black;
+        }
+
+        header h2{
+            text-transform:capitalize;
+            font-size:1.2rem;
+        }
+
+        /* 2. Featured Article */
+        .article{
+            padding:30px;
+            background:white;
+            margin:20px;
+            font-size:1rem; /* 1rem = root font size */
+            font-family:Georgia, 'Times New Roman', serif;
+        }
+
+        .article p{
+            text-indent:40px;
+            line-height:1.8;
+            letter-spacing:1px;
+            word-spacing:5px;
+            text-align:justify;
+            text-align-last:center;
+        }
+
+        /* 3. Text Decoration */
+        .underline{ text-decoration: underline; }
+        .overline{ text-decoration: overline; }
+        .linethrough{ text-decoration: line-through; }
+
+        .doubleunderline{
+            text-decoration-line: underline;
+            text-decoration-style: double;
+        }
+
+        .wavy{
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+            text-decoration-color:red;
+            text-decoration-thickness:3px;
+        }
+
+        .shorthand{
+            text-decoration: underline dashed blue 3px;
+        }
+
+        /* 4. Text Transform */
+        .upper{ text-transform:uppercase; }
+        .lower{ text-transform:lowercase; }
+        .capital{ text-transform:capitalize; }
+
+        /* 5. Text Shadow */
+        .simple-shadow{
+            text-shadow:2px 2px 3px gray;
+        }
+
+        .blur-shadow{
+            text-shadow:2px 2px 8px red;
+        }
+
+        .multi-shadow{
+            text-shadow:0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+            color:#000;
+        }
+
+        /* 6. Font Properties */
+        .italic{ font-style:italic; }
+        .oblique{ font-style:oblique; }
+        .bold{ font-weight:bold; }
+        .heavy{ font-weight:900; }
+        .smallcaps{ font-variant:small-caps; }
+
+        .shorthand-font{
+            font: italic small-caps bold 20px/1.5 'Playfair Display', serif;
+        }
+
+        /* 7. Font Size Units */
+        .px-size{ font-size:20px; } /* fixed size */
+        .em-size{ font-size:1.5em; } /* relative to parent */
+        .rem-size{ font-size:2rem; } /* relative to root */
+        .vw-size{ font-size:3vw; } /* relative to viewport width */
+
+        /* 9. Icons */
+        .icons i{
+            margin:10px;
+            color:#1e3a5f;
+            font-size:30px;
+            text-shadow:2px 2px 4px gray;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Engineering College</h1>
+        <h2>Campus Voice Magazine</h2>
+        <p>Inspiring Young Minds</p>
+    </header>
+
+    <!-- Featured Article -->
+    <section class="article">
+        <h2>Featured Article</h2>
+        <h3>Technology in Modern Education</h3>
+        <p><strong>Author:</strong> Ram Lalla</p>
+
+        <p>
+            Technology has transformed the education system in recent years. 
+            Digital classrooms, online resources, and smart boards have improved learning experiences.
+        </p>
+
+        <p>
+            Students now have access to unlimited information and interactive tools 
+            that enhance creativity and innovation in the academic world.
+        </p>
+    </section>
+
+    <!-- Text Decoration -->
+    <section style="padding:20px;">
+        <h2 class="underline">Underline Example</h2>
+        <h2 class="overline">Overline Example</h2>
+        <h2 class="linethrough">Line Through Example</h2>
+        <h2 class="doubleunderline">Double Underline Example</h2>
+        <h2 class="wavy">Wavy Underline Example</h2>
+        <h2 class="shorthand">Shorthand Decoration Example</h2>
+    </section>
+
+    <!-- Text Transform -->
+    <section style="padding:20px;">
+        <p class="upper">this text is uppercase</p>
+        <p class="lower">THIS TEXT IS LOWERCASE</p>
+        <p class="capital">this text is capitalize format</p>
+    </section>
+
+    <!-- Text Shadow -->
+    <section style="padding:20px;">
+        <h2 class="simple-shadow">Simple Shadow</h2>
+        <h2 class="blur-shadow">Blur Shadow Effect</h2>
+        <h2 class="multi-shadow">Neon Multiple Shadow</h2>
+    </section>
+
+    <!-- Font Properties -->
+    <section style="padding:20px;">
+        <p class="italic">This is italic text.</p>
+        <p class="oblique">This is oblique text.</p>
+        <p class="bold">This is bold text.</p>
+        <p class="heavy">This is font weight 900.</p>
+        <p class="smallcaps">This is small caps text.</p>
+        <p class="shorthand-font">This uses font shorthand property.</p>
+    </section>
+
+    <!-- Font Size Units -->
+    <section style="padding:20px;">
+        <p class="px-size">Font size using px</p>
+        <p class="em-size">Font size using em</p>
+        <p class="rem-size">Font size using rem</p>
+        <p class="vw-size">Font size using vw</p>
+    </section>
+
+    <!-- Icons Section -->
+    <section class="icons" style="padding:20px; text-align:center;">
+        <i class="fa-solid fa-house"></i>
+        <i class="fa-solid fa-book"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-bell"></i>
+    </section>
+
+</body>
+</html>
