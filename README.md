@@ -1,2 +1,2 @@
 # Internship-Assignment-Codes
-Here, the codes which developed during the internship which was given as assignment is present.
+This repository contains the codes developed during my internship as part of the assigned tasks.
